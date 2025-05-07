@@ -1,0 +1,16 @@
+baseURL = 'https://example.org/'
+languageCode = 'en-us'
+title = 'OctoRibs'
+theme = 'maverick'
+
+[params]
+  logo = '/assets/favicon.ico'
+  description = "Meu blog"
+  author = 'Lucas Riboli'
+  items = 5
+
+[menu]
+  [[menu.main]]
+    identifier = "posts"
+    name = "Post"
+    url = "/posts/"

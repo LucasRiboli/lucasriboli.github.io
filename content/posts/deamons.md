@@ -1,0 +1,49 @@
+---
+author: "Lucas"
+title: "Deamons"
+date: "2025-05-07"
+---
+
+### Daemons: Da Física ao Controle de Sistemas Linux
+
+Em 1871, James Clerk Maxwell, para explicar a segunda lei da termodinâmica, propôs um experimento mental bastante curioso. Ele imaginou um ser finito, capaz de manipular moléculas em um sistema fechado, observando e tomando decisões sobre abrir ou fechar uma porta para permitir a passagem de moléculas rápidas. Mais tarde, Lord Kelvin chamou esse ser de "demônio", não no sentido de uma entidade maléfica, mas referindo-se a uma criatura sobrenatural que trabalha nos bastidores, como o conceito de _daemon_ na mitologia grega — seres invisíveis aos humanos, executando tarefas importantes.
+
+Esta analogia com o conceito de "daemon" é frequentemente citada em discussões sobre o termo em computação, embora a ligação histórica direta seja objeto de debate. No contexto dos computadores, o termo assumiu seu próprio significado técnico específico— mas vamos supor que seja verdade, deixa tudo mais legal —.
+Mas como essa ideia se aplica na prática?
+
+A ideia central permanece: agora, não mais como um experimento mental, mas como algo concreto. Nos sistemas operacionais, enfrentamos o desafio de manter um sistema complexo sob constante observação e ação, sem a intervenção direta do usuário — ou seja, um verdadeiro _daemon_ grego.
+
+Para isso, surgiram os processos que rodam em segundo plano, conhecidos como daemons. Eles permanecem em estado de dormência — ele nao fica de fato off, mas vou explicar melhor mais a frente — , sendo executados por algum gatilho, em intervalos regulares (geralmente segundos ou milissegundos), ou ainda processando filas continuamente. Existem de todos os tipos e funções, mas a constante é: eles operam de forma autônoma, sem depender da ação do usuário, mantendo o funcionamento do sistema operacional ou gerenciando funções que, eventualmente, podem ser usadas por processos interativos.
+
+Um exemplo importante de sistema de gerenciamento de daemons — e amplamente adotado em muitas distribuições modernas — é o **systemd**. Ele funciona como um gerenciador central: inicia e controla muitos outros serviços, analisando arquivos `.service` para determinar a ordem de execução, localização do binário do processo, e como gerenciar suas entradas e saídas.
+
+Na prática, daemons são a base do Linux, atuando em diversos níveis, desde funções próximas ao hardware até aplicações de usuário. Quase tudo o que usamos ou vemos em nosso workflow tem um daemon por trás. E o melhor: podemos criar nossos próprios daemons para executar tarefas que não requerem nossa atenção direta, funcionando em segundo plano.
+
+Hoje, em muitos sistemas modernos, o systemd é um gerenciador de daemons amplamente utilizado, embora existam alternativas como OpenRC, runit e s6 que têm seus próprios méritos e defensores. Com o systemd, podemos, por exemplo, criar um serviço que monitora a temperatura do hardware e gera logs automaticamente, ou executar aplicações "one shot" sob seu controle, gerenciando sua execução, status e eventuais erros.
+
+Claro, existem diversos outros daemons — como eu disse, eles estão por tudo e até onde a gente talvez (?) nem imagine — como o Apache HTTP Server (httpd), que é um servidor web popular que opera como daemon. Existe o crond, responsável pelas suas tarefas agendadas presentes nos cronjobs, e esse cara tem um ponto interessante, pois se pensarmos de uma forma direta, ele executa tarefas que criamos e pedimos para rodar em determinados momentos ou de tanto em tanto tempo e quando não rodam eles ficam parados, muito semelhante aos próprios daemons!
+
+Seriam meus schedulers daemons também? A linha pode ser tênue, pois compartilham características. A principal diferença é que muitos daemons não estão realmente "dormentes" como se poderia pensar - estão ativamente executando, monitorando eventos, interfaces ou portas, estão em Interruptible Sleep (S) ou Uninterruptible Sleep(D), sendo esperando algum evento e aguardando uma operação I/O ser concluída respectivamente. Alguns utilizam polling contínuo, outros operam baseados em eventos do sistema ou filas de tarefas. Na verdade, tanto daemons quanto schedulers podem enfrentar atrasos devido a condições do sistema, embora daemons sejam normalmente projetados para maximizar a eficiência e resposta.
+
+Outro ponto interessante é que existem várias formas de criar um daemon, algumas antigas e usuais, outras modernas e muito resilientes, ou meio-termo.
+
+Uma forma tradicional seria um script no init.d, que faz parte do sistema de inicialização SysV. Este modelo precedeu o systemd e foi o padrão em distribuições Linux por muitos anos. O SysV init utiliza scripts em /etc/init.d/ para iniciar, parar e gerenciar serviços em diferentes runlevels, oferecendo um sistema mais simples mas menos paralelizado que o systemd. Essa abordagem ainda é suportada em muitas distribuições por razões de compatibilidade.
+
+Também podemos criar scripts diretos com loop ou observando filas sem nenhum controle, possivelmente a forma mais fácil mas a mais problemática: a aplicação sem nenhum controle, gerenciamento etc.
+
+##### Exemplo simples de arquivo `.service` para systemd
+
+```
+[Unit]
+Description=Monitor de Temperatura AMD
+
+[Service]
+ExecStart=/usr/local/bin/monitor_temperatura.sh
+
+[Install]
+WantedBy=multi-user.target
+```
+
+Basta criar o script `monitor_temperatura.sh` com o código desejado, dar permissão de execução e habilitar o serviço com o systemd.
+
+Em resumo, esses são os principais pontos sobre daemons. Obrigado pela leitura!

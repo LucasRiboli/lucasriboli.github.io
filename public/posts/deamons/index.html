@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Liste - http://localhost:1313/">
+    <title>Deamons | OctoRibs</title>
+    <meta name="description" content="Meu blog">
+    <meta property="og:url" content="http://localhost:1313/posts/deamons/">
+  <meta property="og:site_name" content="OctoRibs">
+  <meta property="og:title" content="Deamons">
+  <meta property="og:description" content="Daemons: Da Física ao Controle de Sistemas Linux Em 1871, James Clerk Maxwell, para explicar a segunda lei da termodinâmica, propôs um experimento mental bastante curioso. Ele imaginou um ser finito, capaz de manipular moléculas em um sistema fechado, observando e tomando decisões sobre abrir ou fechar uma porta para permitir a passagem de moléculas rápidas. Mais tarde, Lord Kelvin chamou esse ser de “demônio”, não no sentido de uma entidade maléfica, mas referindo-se a uma criatura sobrenatural que trabalha nos bastidores, como o conceito de daemon na mitologia grega — seres invisíveis aos humanos, executando tarefas importantes.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-05-07T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-05-07T00:00:00+00:00">
+
+    
+  <meta itemprop="name" content="Deamons">
+  <meta itemprop="description" content="Daemons: Da Física ao Controle de Sistemas Linux Em 1871, James Clerk Maxwell, para explicar a segunda lei da termodinâmica, propôs um experimento mental bastante curioso. Ele imaginou um ser finito, capaz de manipular moléculas em um sistema fechado, observando e tomando decisões sobre abrir ou fechar uma porta para permitir a passagem de moléculas rápidas. Mais tarde, Lord Kelvin chamou esse ser de “demônio”, não no sentido de uma entidade maléfica, mas referindo-se a uma criatura sobrenatural que trabalha nos bastidores, como o conceito de daemon na mitologia grega — seres invisíveis aos humanos, executando tarefas importantes.">
+  <meta itemprop="datePublished" content="2025-05-07T00:00:00+00:00">
+  <meta itemprop="dateModified" content="2025-05-07T00:00:00+00:00">
+  <meta itemprop="wordCount" content="825">
+    
+    <link rel="canonical" href="http://localhost:1313/posts/deamons/">
+    <link rel="icon" href="http://localhost:1313//assets/favicon.ico">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link href="https://www.google-analytics.com" rel="preconnect" crossorigin>
+    <link rel="alternate" type="application/atom+xml" title="OctoRibs" href="http://localhost:1313//atom.xml" />
+    <link rel="alternate" type="application/json" title="OctoRibs" href="http://localhost:1313//feed.json" />
+    <link rel="shortcut icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNk+A8AAQUBAScY42YAAAAASUVORK5CYII=">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bricolage+Grotesque">
+    
+    <style>*,:after,:before{box-sizing:border-box;padding:0}body{font:1rem/1.5 bricolage grotesque,-apple-system,BlinkMacSystemFont,segoe ui,Helvetica,Arial,sans-serif;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;padding:2rem;background:#fffdfa;color:#000}.skip-link{position:absolute;top:-40px;left:0;background:#eee;z-index:100}.skip-link:focus{top:0}header{display:flex;justify-content:space-between;align-items:center;position:relative;padding-bottom:1rem}header .burger{display:none;background:0 0;border:none;padding:0;cursor:pointer}header .burger span{display:block;width:25px;height:3px;background:#000;margin:5px 0;transition:all .3s ease}@media(max-width:768px){header .burger{display:block;z-index:2}header .nav-menu{position:fixed;top:0;right:-100%;width:100%;height:100vh;background:#fffdfa;padding:2rem;transition:.3s ease;z-index:1}header .nav-menu.active{right:0}header .nav-menu ul{flex-direction:column;align-items:center;width:100%}header .nav-menu ul li{display:block;font-size:1.2rem;border-bottom:1px dotted #000;height:50px;display:flex;justify-content:center;align-items:center}header.menu-open .burger span:first-child{transform:rotate(45deg)translate(5px,6px)}header.menu-open .burger span:nth-child(2){opacity:0}header.menu-open .burger span:last-child{transform:rotate(-45deg)translate(5px,-6px)}}header a{text-decoration:none}header ul{list-style-type:none;padding:0}header li,header a{display:inline}.link{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;text-decoration:none}.time{font-variant-numeric:tabular-nums;white-space:nowrap}blockquote{border-left:5px solid #eee;padding-left:1rem;margin:0}a,a:visited{color:inherit}a:hover,a.heading-link{text-decoration:none}pre{padding:.5rem;overflow:auto;overflow-x:scroll;overflow-wrap:normal}code,pre{font-family:San Francisco Mono,Monaco,consolas,lucida console,dejavu sans mono,bitstream vera sans mono,monospace;font-size:normal;font-size:small;background:#eee}code{margin:.1rem;border:none;overflow:visible;overflow-wrap:anywhere}ul{list-style-type:square}ul,ol{padding-left:1.2rem}.list{line-height:2;list-style-type:none;padding-left:0}.list li{padding-bottom:.1rem}.meta{color:#777}.content{max-width:70ch;margin:0 auto}h2.post{padding-top:.5rem}header ul a:first-child{padding-left:1rem}.nav{height:1px;background:#000;content:'';max-width:10%}.list li{display:flex;align-items:baseline}.list li time{flex:initial}.hr-list{margin-top:0;margin-bottom:0;margin-right:.5rem;margin-left:.5rem;height:1px;border:0;border-bottom:1px dotted #ccc;flex:1 0 1rem}.m,hr{border:0;margin:3rem 0}img{max-width:100%;height:auto}.post-date{margin:5% 0}.index-date{color:#9a9a9a}.animate-blink{animation:opacity 1s infinite;opacity:1}@keyframes opacity{0%{opacity:1}50%{opacity:.5}100%{opacity:0}}.tags{display:flex;justify-content:space-between}.tags ul{padding:0;margin:0}.tags li{display:inline}.avatar{height:120px;width:120px;position:relative;margin:-10px 0 0 15px;float:right;border-radius:50%}table{width:100%;border-collapse:collapse}th,td{border:1px solid #ddd;text-align:left;padding:8px}th{background-color:#f2f2f2}</style>
+  
+    
+    
+    
+    <script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "articleSection": "posts",
+        "name": "Deamons",
+        "headline": "Deamons",
+        "alternativeHeadline": "",
+        "description": "\u003ch3 id=\u0022daemons-da-física-ao-controle-de-sistemas-linux\u0022\u003eDaemons: Da Física ao Controle de Sistemas Linux\u003c\/h3\u003e\n\u003cp\u003eEm 1871, James Clerk Maxwell, para explicar a segunda lei da termodinâmica, propôs um experimento mental bastante curioso. Ele imaginou um ser finito, capaz de manipular moléculas em um sistema fechado, observando e tomando decisões sobre abrir ou fechar uma porta para permitir a passagem de moléculas rápidas. Mais tarde, Lord Kelvin chamou esse ser de \u0026ldquo;demônio\u0026rdquo;, não no sentido de uma entidade maléfica, mas referindo-se a uma criatura sobrenatural que trabalha nos bastidores, como o conceito de \u003cem\u003edaemon\u003c\/em\u003e na mitologia grega — seres invisíveis aos humanos, executando tarefas importantes.\u003c\/p\u003e",
+        "inLanguage": "en-us",
+        "isFamilyFriendly": "true",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/localhost:1313\/posts\/deamons\/"
+        },
+        "author" : {
+            "@type": "Person",
+            "name": "Lucas"
+        },
+        "creator" : {
+            "@type": "Person",
+            "name": "Lucas"
+        },
+        "accountablePerson" : {
+            "@type": "Person",
+            "name": "Lucas"
+        },
+        "copyrightHolder" : "OctoRibs",
+        "copyrightYear" : "2025",
+        "dateCreated": "2025-05-07T00:00:00.00Z",
+        "datePublished": "2025-05-07T00:00:00.00Z",
+        "dateModified": "2025-05-07T00:00:00.00Z",
+        "publisher":{
+            "@type":"Organization",
+            "name": "OctoRibs",
+            "url": "http://localhost:1313/",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "http:\/\/localhost:1313\/assets\/favicon.ico",
+                "width":"32",
+                "height":"32"
+            }
+        },
+        "image": "http://localhost:1313/assets/favicon.ico",
+        "url" : "http:\/\/localhost:1313\/posts\/deamons\/",
+        "wordCount" : "825",
+        "genre" : [ ],
+        "keywords" : [ ]
+    }
+    </script>
+     
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const burger = document.querySelector('.burger');
+            const nav = document.querySelector('.nav-menu');
+            const header = document.querySelector('header');
+        
+            if (burger) {
+                burger.addEventListener('click', () => {
+                    nav.classList.toggle('active');
+                    header.classList.toggle('menu-open');
+                });
+        
+                
+                document.addEventListener('click', (e) => {
+                    if (!header.contains(e.target) && nav.classList.contains('active')) {
+                        nav.classList.remove('active');
+                        header.classList.remove('menu-open');
+                    }
+                });
+            }
+        });
+    </script> 
+  </head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to main</a>
+  <main id="main">
+  <div class="content">
+    
+<header>
+  <p style="padding: 0;margin: 0;">
+    <a href="http://localhost:1313/">
+      <b>OctoRibs</b>
+      <span class="text-stone-500 animate-blink">▮</span>
+    </a>
+  </p>
+
+  
+  <ul style="padding: 0;margin: 0;">
+    
+    
+    <li class="">
+      <a href="/posts/"><span>Post</span></a>
+      
+    </li>
+  </ul>
+  
+</header>
+<hr class="hr-list" style="padding: 0;margin: 0;">
+    <section>
+      <h2 class="post">Deamons</h2>
+      <h3 id="daemons-da-física-ao-controle-de-sistemas-linux">Daemons: Da Física ao Controle de Sistemas Linux</h3>
+<p>Em 1871, James Clerk Maxwell, para explicar a segunda lei da termodinâmica, propôs um experimento mental bastante curioso. Ele imaginou um ser finito, capaz de manipular moléculas em um sistema fechado, observando e tomando decisões sobre abrir ou fechar uma porta para permitir a passagem de moléculas rápidas. Mais tarde, Lord Kelvin chamou esse ser de &ldquo;demônio&rdquo;, não no sentido de uma entidade maléfica, mas referindo-se a uma criatura sobrenatural que trabalha nos bastidores, como o conceito de <em>daemon</em> na mitologia grega — seres invisíveis aos humanos, executando tarefas importantes.</p>
+<p>Esta analogia com o conceito de &ldquo;daemon&rdquo; é frequentemente citada em discussões sobre o termo em computação, embora a ligação histórica direta seja objeto de debate. No contexto dos computadores, o termo assumiu seu próprio significado técnico específico— mas vamos supor que seja verdade, deixa tudo mais legal —.
+Mas como essa ideia se aplica na prática?</p>
+<p>A ideia central permanece: agora, não mais como um experimento mental, mas como algo concreto. Nos sistemas operacionais, enfrentamos o desafio de manter um sistema complexo sob constante observação e ação, sem a intervenção direta do usuário — ou seja, um verdadeiro <em>daemon</em> grego.</p>
+<p>Para isso, surgiram os processos que rodam em segundo plano, conhecidos como daemons. Eles permanecem em estado de dormência — ele nao fica de fato off, mas vou explicar melhor mais a frente — , sendo executados por algum gatilho, em intervalos regulares (geralmente segundos ou milissegundos), ou ainda processando filas continuamente. Existem de todos os tipos e funções, mas a constante é: eles operam de forma autônoma, sem depender da ação do usuário, mantendo o funcionamento do sistema operacional ou gerenciando funções que, eventualmente, podem ser usadas por processos interativos.</p>
+<p>Um exemplo importante de sistema de gerenciamento de daemons — e amplamente adotado em muitas distribuições modernas — é o <strong>systemd</strong>. Ele funciona como um gerenciador central: inicia e controla muitos outros serviços, analisando arquivos <code>.service</code> para determinar a ordem de execução, localização do binário do processo, e como gerenciar suas entradas e saídas.</p>
+<p>Na prática, daemons são a base do Linux, atuando em diversos níveis, desde funções próximas ao hardware até aplicações de usuário. Quase tudo o que usamos ou vemos em nosso workflow tem um daemon por trás. E o melhor: podemos criar nossos próprios daemons para executar tarefas que não requerem nossa atenção direta, funcionando em segundo plano.</p>
+<p>Hoje, em muitos sistemas modernos, o systemd é um gerenciador de daemons amplamente utilizado, embora existam alternativas como OpenRC, runit e s6 que têm seus próprios méritos e defensores. Com o systemd, podemos, por exemplo, criar um serviço que monitora a temperatura do hardware e gera logs automaticamente, ou executar aplicações &ldquo;one shot&rdquo; sob seu controle, gerenciando sua execução, status e eventuais erros.</p>
+<p>Claro, existem diversos outros daemons — como eu disse, eles estão por tudo e até onde a gente talvez (?) nem imagine — como o Apache HTTP Server (httpd), que é um servidor web popular que opera como daemon. Existe o crond, responsável pelas suas tarefas agendadas presentes nos cronjobs, e esse cara tem um ponto interessante, pois se pensarmos de uma forma direta, ele executa tarefas que criamos e pedimos para rodar em determinados momentos ou de tanto em tanto tempo e quando não rodam eles ficam parados, muito semelhante aos próprios daemons!</p>
+<p>Seriam meus schedulers daemons também? A linha pode ser tênue, pois compartilham características. A principal diferença é que muitos daemons não estão realmente &ldquo;dormentes&rdquo; como se poderia pensar - estão ativamente executando, monitorando eventos, interfaces ou portas, estão em Interruptible Sleep (S) ou Uninterruptible Sleep(D), sendo esperando algum evento e aguardando uma operação I/O ser concluída respectivamente. Alguns utilizam polling contínuo, outros operam baseados em eventos do sistema ou filas de tarefas. Na verdade, tanto daemons quanto schedulers podem enfrentar atrasos devido a condições do sistema, embora daemons sejam normalmente projetados para maximizar a eficiência e resposta.</p>
+<p>Outro ponto interessante é que existem várias formas de criar um daemon, algumas antigas e usuais, outras modernas e muito resilientes, ou meio-termo.</p>
+<p>Uma forma tradicional seria um script no init.d, que faz parte do sistema de inicialização SysV. Este modelo precedeu o systemd e foi o padrão em distribuições Linux por muitos anos. O SysV init utiliza scripts em /etc/init.d/ para iniciar, parar e gerenciar serviços em diferentes runlevels, oferecendo um sistema mais simples mas menos paralelizado que o systemd. Essa abordagem ainda é suportada em muitas distribuições por razões de compatibilidade.</p>
+<p>Também podemos criar scripts diretos com loop ou observando filas sem nenhum controle, possivelmente a forma mais fácil mas a mais problemática: a aplicação sem nenhum controle, gerenciamento etc.</p>
+<h5 id="exemplo-simples-de-arquivo-service-para-systemd">Exemplo simples de arquivo <code>.service</code> para systemd</h5>
+<pre tabindex="0"><code>[Unit]
+Description=Monitor de Temperatura AMD
+
+[Service]
+ExecStart=/usr/local/bin/monitor_temperatura.sh
+
+[Install]
+WantedBy=multi-user.target
+</code></pre><p>Basta criar o script <code>monitor_temperatura.sh</code> com o código desejado, dar permissão de execução e habilitar o serviço com o systemd.</p>
+<p>Em resumo, esses são os principais pontos sobre daemons. Obrigado pela leitura!</p>
+
+      
+      <div class="post-date">
+        <span class="g time">May 7, 2025 </span> &#8729;
+         
+      </div>
+      
+    </section>
+    
+    
+    
+  </div>
+</main>
+</body>
+</html>
