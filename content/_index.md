@@ -1,4 +1,4 @@
-## Over here, stranger 👋
+## Over here, stranger
 
 
 Olá! Seja muito bem-vindo(a) ao meu blog.
@@ -10,10 +10,6 @@ Acredito que o conhecimento se fortalece quando é compartilhado. Por isso, aqui
 Este blog não é um ponto de chegada, mas parte de um processo. Se você também gosta de aprender na prática, discutir soluções e mergulhar em problemas reais, espero que este espaço contribua de alguma forma na sua trajetória.
 
 ---
-
 📫 **Conecte-se comigo**
 - [GitHub](https://github.com/LucasRiboli)
 - [LinkedIn](https://www.linkedin.com/in/lucas-riboli)
-- [Twitter (opcional)](https://x.com/LucasRiboli3)
-
-Sinta-se à vontade para comentar, sugerir temas ou apenas trocar uma ideia. Vamos aprender juntos.
