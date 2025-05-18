@@ -4,38 +4,47 @@ title = 'OctoRibs'
 theme = 'terminal'
 
 [params]
-  themeColor = "orange"
-  themeColorDark = "green"
-  showMenuItems = 2
-  showLanguageSelector = true
+  # Cor do tema ("orange", "blue", "red", "green", "pink")
+  themeColor = "green"
+  
+  # Para tema escuro
+  # themeColorDark = "green"
+  
+  # Se você usar favicon
+  favicon = "/favicon.ico"
+  
+  # Imagens em tela cheia
   fullWidthTheme = false
-  centerTheme = false
-  author = "OctoRibs"
-  staticDir = ["static"]
-  enableGitInfo = true
+  
+  # Centralizar conteúdo
+  centerTheme = true
+  
+  # Menus a mostrar
+  showMenuItems = 5
+  
+  # Mostrar datas de leitura para posts
+  showReadingTime = true
 
 [languages]
-  [languages.en]
-    languageName = "Português"
-    title = "Título do seu site"
-    subtitle = "Subtítulo do seu site"
-    owner = "OctoRibs"
+  [languages.pt]
+    title = "OctoRibs"
+    subtitle = "Seu Subtítulo"
     keywords = ""
     copyright = ""
     menuMore = "Mostrar mais"
     readMore = "Ler mais"
     readOtherPosts = "Ler outros posts"
     
-    [languages.en.params.logo]
+    [languages.pt.params.logo]
       logoText = "OctoRibs"
       logoHomeLink = "/"
     
-    [languages.en.menu]
-      [[languages.en.menu.main]]
-        identifier = "about"
-        name = "Sobre"
-        url = "/about"
-      [[languages.en.menu.main]]
+    [languages.pt.menu]
+      [[languages.pt.menu.main]]
         identifier = "posts"
         name = "Posts"
         url = "/posts"
+      [[languages.pt.menu.main]]
+        identifier = "about"
+        name = "About"
+        url = "/About"
