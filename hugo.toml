@@ -2,49 +2,31 @@ baseURL = 'https://lucasriboli.github.io/'
 languageCode = 'en-us'
 title = 'OctoRibs'
 theme = 'terminal'
+defaultContentLanguage = 'en'
 
-[params]
-  # Cor do tema ("orange", "blue", "red", "green", "pink")
-  themeColor = "green"
-  
-  # Para tema escuro
-  # themeColorDark = "green"
-  
-  # Se você usar favicon
-  favicon = "/favicon.ico"
-  
-  # Imagens em tela cheia
-  fullWidthTheme = false
-  
-  # Centralizar conteúdo
-  centerTheme = true
-  
-  # Menus a mostrar
-  showMenuItems = 5
-  
-  # Mostrar datas de leitura para posts
-  showReadingTime = true
+# Outras configurações...
 
 [languages]
-  [languages.pt]
+  [languages.en]
     title = "OctoRibs"
-    subtitle = "Seu Subtítulo"
+    subtitle = "Your Subtitle"
     keywords = ""
     copyright = ""
-    menuMore = "Mostrar mais"
-    readMore = "Ler mais"
-    readOtherPosts = "Ler outros posts"
+    menuMore = "Show more"
+    readMore = "Read more"
+    readOtherPosts = "Read other posts"
     
-    [languages.pt.params.logo]
+    [languages.en.params.logo]
       logoText = "OctoRibs"
       logoHomeLink = "/"
     
-    [languages.pt.menu]
-      [[languages.pt.menu.main]]
+    [languages.en.menu]
+      [[languages.en.menu.main]]
         identifier = "posts"
         name = "Posts"
         url = "/posts"
-      [[languages.pt.menu.main]]
+      [[languages.en.menu.main]]
         identifier = "about"
         name = "About"
-        url = "/About"
+        url = "/about"
+  
