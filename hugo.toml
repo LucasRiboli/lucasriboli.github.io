@@ -1,16 +1,39 @@
 baseURL = 'https://example.org/'
 languageCode = 'en-us'
 title = 'OctoRibs'
-theme = 'maverick'
+theme = 'terminal'
 
 [params]
-  logo = '/assets/favicon.ico'
-  description = "Meu blog"
-  author = 'Lucas Riboli'
-  items = 5
+  themeColor = "orange"
+  themeColorDark = "green"
+  showMenuItems = 2
+  showLanguageSelector = true
+  fullWidthTheme = false
+  centerTheme = false
+  author = "OctoRibs"
 
-[menu]
-  [[menu.main]]
-    identifier = "posts"
-    name = "Post"
-    url = "/posts/"
+[languages]
+  [languages.en]
+    languageName = "Português"
+    title = "Título do seu site"
+    subtitle = "Subtítulo do seu site"
+    owner = "Seu Nome"
+    keywords = ""
+    copyright = ""
+    menuMore = "Mostrar mais"
+    readMore = "Ler mais"
+    readOtherPosts = "Ler outros posts"
+    
+    [languages.en.params.logo]
+      logoText = "Nome do seu blog"
+      logoHomeLink = "/"
+    
+    [languages.en.menu]
+      [[languages.en.menu.main]]
+        identifier = "about"
+        name = "Sobre"
+        url = "/about"
+      [[languages.en.menu.main]]
+        identifier = "posts"
+        name = "Posts"
+        url = "/posts"

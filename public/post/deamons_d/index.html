@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  
+    <title>Deamons - Orquestração invisivel :: Título do seu site</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Daemons: Da Física ao Controle de Sistemas Linux Em 1871, James Clerk Maxwell, para explicar a segunda lei da termodinâmica, propôs um experimento mental bastante curioso. Ele imaginou um ser finito, capaz de manipular moléculas em um sistema fechado, observando e tomando decisões sobre abrir ou fechar uma porta para permitir a passagem de moléculas rápidas. Mais tarde, Lord Kelvin chamou esse ser de &ldquo;demônio&rdquo;, não no sentido de uma entidade maléfica, mas referindo-se a uma criatura sobrenatural que trabalha nos bastidores, como o conceito de daemon na mitologia grega — seres invisíveis aos humanos, executando tarefas importantes.
+" />
+<meta name="keywords" content="" />
+
+  <meta name="robots" content="noodp" />
+
+<link rel="canonical" href="http://localhost:1313/post/deamons_d/" />
+
+
+
+
+
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/buttons.min.86f6b4c106b6c6eb690ae5203d36b442c1f66f718ff4e8164fa86cf6c61ad641.css">
+
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/code.min.d529ea4b2fb8d34328d7d31afc5466d5f7bc2f0bc9abdd98b69385335d7baee4.css">
+
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/fonts.min.5bb7ed13e1d00d8ff39ea84af26737007eb5051b157b86fc24487c94f3dc8bbe.css">
+
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/footer.min.eb8dfc2c6a7eafa36cd3ba92d63e69e849e2200e0002a228d137f236b09ecd75.css">
+
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/gist.min.a751e8b0abe1ba8bc53ced52a38b19d8950fe78ca29454ea8c2595cf26aad5c0.css">
+
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/header.min.75c7eb0e2872d95ff48109c6647d0223a38db52e2561dd87966eb5fc7c6bdac6.css">
+
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/main.min.36833afd348409fc6c3d09d0897c5833d9d5bf1ff31f5e60ea3ee42ce2b1268c.css">
+
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/menu.min.3c17467ebeb3d38663dce68f71f519901124fa5cbb4519b2fb0667a21e9aca39.css">
+
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/pagination.min.bbb986dbce00a5ce5aca0504b7925fc1c581992a4bf57f163e5d69cc1db7d836.css">
+
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/post.min.e6dddd258e64c83e05cec0cd49c05216742d42fc8ecbfbe6b67083412b609bd3.css">
+
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/syntax.min.a0773cce9310cb6d8ed23e50f005448facf29a53001b57e038828daa466b25c0.css">
+
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/terminal.min.e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css">
+
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/terms.min.b81791663c3790e738e571cdbf802312390d30e4b1d8dc9d814a5b5454d0ac11.css">
+
+
+
+
+
+
+
+<link rel="shortcut icon" href="http://localhost:1313/favicon.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+
+
+<meta name="twitter:card" content="summary" />
+
+
+
+<meta property="og:locale" content="en" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Deamons - Orquestração invisivel">
+<meta property="og:description" content="Daemons: Da Física ao Controle de Sistemas Linux Em 1871, James Clerk Maxwell, para explicar a segunda lei da termodinâmica, propôs um experimento mental bastante curioso. Ele imaginou um ser finito, capaz de manipular moléculas em um sistema fechado, observando e tomando decisões sobre abrir ou fechar uma porta para permitir a passagem de moléculas rápidas. Mais tarde, Lord Kelvin chamou esse ser de &ldquo;demônio&rdquo;, não no sentido de uma entidade maléfica, mas referindo-se a uma criatura sobrenatural que trabalha nos bastidores, como o conceito de daemon na mitologia grega — seres invisíveis aos humanos, executando tarefas importantes.
+" />
+<meta property="og:url" content="http://localhost:1313/post/deamons_d/" />
+<meta property="og:site_name" content="Título do seu site" />
+
+  <meta property="og:image" content="http://localhost:1313/og-image.png">
+
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="627">
+
+
+  <meta property="article:published_time" content="2025-05-07 00:00:00 &#43;0000 UTC" />
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body>
+
+
+<div class="container">
+
+  <header class="header">
+  <div class="header__inner">
+    <div class="header__logo">
+      <a href="/">
+  <div class="logo">
+    Nome do seu blog
+  </div>
+</a>
+
+    </div>
+    
+      <ul class="menu menu--mobile">
+  <li class="menu__trigger">Menu&nbsp;▾</li>
+  <li>
+    <ul class="menu__dropdown">
+      
+        
+          <li><a href="/posts">Posts</a></li>
+        
+      
+        
+          <li><a href="/about">Sobre</a></li>
+        
+      
+      
+        <hr />
+        
+          <li>
+            <a href="http://localhost:1313/">Português</a>
+          </li>
+        
+      
+    </ul>
+  </li>
+</ul>
+
+    
+    
+      <ul class="menu menu--desktop menu--language-selector">
+  <li class="menu__trigger">Português&nbsp;▾</li>
+  <li>
+    <ul class="menu__dropdown">
+      
+        <li><a href="http://localhost:1313/">Português</a></li>
+      
+    </ul>
+  </li>
+</ul>
+
+    
+  </div>
+  
+    <nav class="navigation-menu">
+  <ul class="navigation-menu__inner menu--desktop">
+    
+      
+        
+          <li><a href="/posts" >Posts</a></li>
+        
+      
+        
+          <li><a href="/about" >Sobre</a></li>
+        
+      
+      
+    
+  </ul>
+</nav>
+
+  
+</header>
+
+
+  <div class="content">
+    
+<article class="post">
+  <h1 class="post-title">
+    <a href="http://localhost:1313/post/deamons_d/">Deamons - Orquestração invisivel</a>
+  </h1>
+  <div class="post-meta"><time class="post-date">2025-05-07</time><span class="post-author">Lucas</span></div>
+
+  
+  
+
+
+  
+
+  <div class="post-content"><div>
+        <h2 id="daemons-da-física-ao-controle-de-sistemas-linux">Daemons: Da Física ao Controle de Sistemas Linux<a href="#daemons-da-física-ao-controle-de-sistemas-linux" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p>Em 1871, James Clerk Maxwell, para explicar a segunda lei da termodinâmica, propôs um experimento mental bastante curioso. Ele imaginou um ser finito, capaz de manipular moléculas em um sistema fechado, observando e tomando decisões sobre abrir ou fechar uma porta para permitir a passagem de moléculas rápidas. Mais tarde, Lord Kelvin chamou esse ser de &ldquo;demônio&rdquo;, não no sentido de uma entidade maléfica, mas referindo-se a uma criatura sobrenatural que trabalha nos bastidores, como o conceito de <em>daemon</em> na mitologia grega — seres invisíveis aos humanos, executando tarefas importantes.</p>
+<p>Esta analogia com o conceito de &ldquo;daemon&rdquo; é frequentemente citada em discussões sobre o termo em computação, embora a ligação histórica direta seja objeto de debate. No contexto dos computadores, o termo assumiu seu próprio significado técnico específico— mas vamos supor que seja verdade, deixa tudo mais legal —.
+Mas como essa ideia se aplica na prática?</p>
+<p>A ideia central permanece: agora, não mais como um experimento mental, mas como algo concreto. Nos sistemas operacionais, enfrentamos o desafio de manter um sistema complexo sob constante observação e ação, sem a intervenção direta do usuário — ou seja, um verdadeiro <em>daemon</em> grego.</p>
+<p>Para isso, surgiram os processos que rodam em segundo plano, conhecidos como daemons. Eles permanecem em estado de dormência — ele nao fica de fato off, mas vou explicar melhor mais a frente — , sendo executados por algum gatilho, em intervalos regulares (geralmente segundos ou milissegundos), ou ainda processando filas continuamente. Existem de todos os tipos e funções, mas a constante é: eles operam de forma autônoma, sem depender da ação do usuário, mantendo o funcionamento do sistema operacional ou gerenciando funções que, eventualmente, podem ser usadas por processos interativos.</p>
+<p>Um exemplo importante de sistema de gerenciamento de daemons — e amplamente adotado em muitas distribuições modernas — é o <strong>systemd</strong>. Ele funciona como um gerenciador central: inicia e controla muitos outros serviços, analisando arquivos <code>.service</code> para determinar a ordem de execução, localização do binário do processo, e como gerenciar suas entradas e saídas.</p>
+<p>Na prática, daemons são a base do Linux, atuando em diversos níveis, desde funções próximas ao hardware até aplicações de usuário. Quase tudo o que usamos ou vemos em nosso workflow tem um daemon por trás. E o melhor: podemos criar nossos próprios daemons para executar tarefas que não requerem nossa atenção direta, funcionando em segundo plano.</p>
+<p>Hoje, em muitos sistemas modernos, o systemd é um gerenciador de daemons amplamente utilizado, embora existam alternativas como OpenRC, runit e s6 que têm seus próprios méritos e defensores. Com o systemd, podemos, por exemplo, criar um serviço que monitora a temperatura do hardware e gera logs automaticamente, ou executar aplicações &ldquo;one shot&rdquo; sob seu controle, gerenciando sua execução, status e eventuais erros.</p>
+<p>Claro, existem diversos outros daemons — como eu disse, eles estão por tudo e até onde a gente talvez (?) nem imagine — como o Apache HTTP Server (httpd), que é um servidor web popular que opera como daemon. Existe o crond, responsável pelas suas tarefas agendadas presentes nos cronjobs, e esse cara tem um ponto interessante, pois se pensarmos de uma forma direta, ele executa tarefas que criamos e pedimos para rodar em determinados momentos ou de tanto em tanto tempo e quando não rodam eles ficam parados, muito semelhante aos próprios daemons!</p>
+<p>Seriam meus schedulers daemons também? A linha pode ser tênue, pois compartilham características. A principal diferença é que muitos daemons não estão realmente &ldquo;dormentes&rdquo; como se poderia pensar - estão ativamente executando, monitorando eventos, interfaces ou portas, estão em Interruptible Sleep (S) ou Uninterruptible Sleep(D), sendo esperando algum evento e aguardando uma operação I/O ser concluída respectivamente. Alguns utilizam polling contínuo, outros operam baseados em eventos do sistema ou filas de tarefas. Na verdade, tanto daemons quanto schedulers podem enfrentar atrasos devido a condições do sistema, embora daemons sejam normalmente projetados para maximizar a eficiência e resposta.</p>
+<p>É interessante também saber que existem várias formas de criar um daemon, algumas antigas e usuais, outras modernas e muito resilientes, ou meio-termo.</p>
+<p>Uma forma tradicional seria um script no init.d, que faz parte do sistema de inicialização SysV. Este modelo precedeu o systemd e foi o padrão em distribuições Linux por muitos anos. O SysV init utiliza scripts em /etc/init.d/ para iniciar, parar e gerenciar serviços em diferentes runlevels, oferecendo um sistema mais simples mas menos paralelizado que o systemd. Essa abordagem ainda é suportada em muitas distribuições por razões de compatibilidade.</p>
+<p>Também podemos criar scripts diretos com loop ou observando filas sem nenhum controle, possivelmente a forma mais fácil mas a mais problemática: a aplicação sem nenhum controle, gerenciamento etc.</p>
+<p>Mas nem tudo é tão preto no branco assim, dentro da comunida Linux, há quem veja o systemd como um quebra de paradigmas inaceitavel. A filosofia Unix prega que &ldquo;faça uma coisa e faça bem feito&rdquo; (&ldquo;Do One Thing and Do It Well&rdquo;). O systemd faz muitas coisas, para alguns isso é praticidade e um design de aplicação muito favoravel para outros é complexidade e risco de mais. Ouve alguns possicionamentos de algumas figurinhas famosas na comunidade como o de Linux Torvalds que ve de forma neutro e até positiva e Devuan que sugeriu como fork do debian evitar o uso de systemd.</p>
+<h2 id="hands-on---systemd">Hands On - Systemd<a href="#hands-on---systemd" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p>Mas não basta entender o conceito — como isso aparece no Linux real que usamos todos os dias? Vamos olhar um pouco para a prática.</p>
+<p>Fica aqui o alerta, que vou tratar apenas de systemd nesse hands On, nada contra as demais formas de criar um deamon, é apenas pela praticidade e visualização que teremos.</p>
+<p>Antes de colocar a mão na massa e criar algum deamon, vamos analisar alguns ja existentes dentro de um pequeno lab, entao bora lá.</p>
+<h3 id="lab">Lab:<a href="#lab" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<h3 id="laboratório-de-troubleshooting-com-systemd-e-journal">Laboratório de Troubleshooting com Systemd e Journal<a href="#laboratório-de-troubleshooting-com-systemd-e-journal" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>A ideia nesse lab é a gente exercitar como seria criar um deamons usando o systemd e fazer troubleshooting usando journalctl e o proprio systemd</p>
+<h4 id="parte-1-criando-um-serviço-de-teste">Parte 1: Criando um Serviço de Teste<a href="#parte-1-criando-um-serviço-de-teste" class="hanchor" ariaLabel="Anchor">#</a> </h4>
+<h4 id="1-crie-um-script-simples-que-servirá-como-nosso-serviço">1. Crie um script simples que servirá como nosso serviço<a href="#1-crie-um-script-simples-que-servirá-como-nosso-serviço" class="hanchor" ariaLabel="Anchor">#</a> </h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo nano /usr/local/bin/meu-servico.sh
+</span></span></code></pre></div><p>Adicione o seguinte conteúdo:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e">#!/bin/bash
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>echo <span style="color:#e6db74">&#34;Iniciando meu-servico&#34;</span>
+</span></span><span style="display:flex;"><span>logger <span style="color:#e6db74">&#34;meu-servico iniciado com sucesso&#34;</span>
+</span></span><span style="display:flex;"><span>count<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">while</span> true; <span style="color:#66d9ef">do</span>
+</span></span><span style="display:flex;"><span>    echo <span style="color:#e6db74">&#34;meu-servico está funcionando: iteração </span>$count<span style="color:#e6db74">&#34;</span>
+</span></span><span style="display:flex;"><span>    logger <span style="color:#e6db74">&#34;meu-servico está rodando: verificação #</span>$count<span style="color:#e6db74">&#34;</span>
+</span></span><span style="display:flex;"><span>    count<span style="color:#f92672">=</span><span style="color:#66d9ef">$((</span>count+1<span style="color:#66d9ef">))</span>
+</span></span><span style="display:flex;"><span>    sleep <span style="color:#ae81ff">10</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">done</span>
+</span></span></code></pre></div><p>OBS: pode ser qualquer conteudo mas caso queira algo pronto pode usar esse.</p>
+<h4 id="2-torne-o-script-executável">2. Torne o script executável<a href="#2-torne-o-script-executável" class="hanchor" ariaLabel="Anchor">#</a> </h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo chmod +x /usr/local/bin/meu-servico.sh
+</span></span></code></pre></div><h4 id="3-crie-um-arquivo-de-unidade-systemd-para-o-serviço">3. Crie um arquivo de unidade systemd para o serviço<a href="#3-crie-um-arquivo-de-unidade-systemd-para-o-serviço" class="hanchor" ariaLabel="Anchor">#</a> </h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo nano /etc/systemd/system/meu-servico.service
+</span></span></code></pre></div><p>Adicione o seguinte conteúdo:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ini" data-lang="ini"><span style="display:flex;"><span><span style="color:#66d9ef">[Unit]</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">Description</span><span style="color:#f92672">=</span><span style="color:#e6db74">Meu servico executando</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">After</span><span style="color:#f92672">=</span><span style="color:#e6db74">network.target</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">[Service]</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">Type</span><span style="color:#f92672">=</span><span style="color:#e6db74">simple</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">ExecStart</span><span style="color:#f92672">=</span><span style="color:#e6db74">/usr/local/bin/meu-servico.sh</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">Restart</span><span style="color:#f92672">=</span><span style="color:#e6db74">always</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">RestartSec</span><span style="color:#f92672">=</span><span style="color:#e6db74">5</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">StandardOutput</span><span style="color:#f92672">=</span><span style="color:#e6db74">journal</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">StandardError</span><span style="color:#f92672">=</span><span style="color:#e6db74">journal</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">SyslogIdentifier</span><span style="color:#f92672">=</span><span style="color:#e6db74">meu-servico</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">[Install]</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">WantedBy</span><span style="color:#f92672">=</span><span style="color:#e6db74">multi-user.target</span>
+</span></span></code></pre></div><h4 id="4-recarregue-a-configuração-do-systemd-habilite-e-inicie-o-serviço">4. Recarregue a configuração do systemd, habilite e inicie o serviço<a href="#4-recarregue-a-configuração-do-systemd-habilite-e-inicie-o-serviço" class="hanchor" ariaLabel="Anchor">#</a> </h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo systemctl daemon-reload
+</span></span><span style="display:flex;"><span>sudo systemctl enable meu-servico.service
+</span></span><span style="display:flex;"><span>sudo systemctl start meu-servico.service
+</span></span></code></pre></div><h4 id="5-verifique-se-o-serviço-está-funcionando-corretamente">5. Verifique se o serviço está funcionando corretamente<a href="#5-verifique-se-o-serviço-está-funcionando-corretamente" class="hanchor" ariaLabel="Anchor">#</a> </h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo systemctl status meu-servico.service
+</span></span></code></pre></div><p>Observe o status (deve estar &ldquo;active (running)&rdquo;) e as linhas de log recentes.</p>
+<h4 id="6-verifique-os-logs-do-serviço">6. Verifique os logs do serviço<a href="#6-verifique-os-logs-do-serviço" class="hanchor" ariaLabel="Anchor">#</a> </h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo journalctl -u meu-servico.service -f
+</span></span></code></pre></div><p>O parâmetro <code>-f</code> (follow) mostra as mensagens em tempo real.</p>
+<h4 id="parte-2-quebrando-o-serviço-intencionalmente">Parte 2: Quebrando o Serviço Intencionalmente<a href="#parte-2-quebrando-o-serviço-intencionalmente" class="hanchor" ariaLabel="Anchor">#</a> </h4>
+<p>Agora vamos quebrar o serviço de várias maneiras para praticar diagnóstico.</p>
+<h4 id="cenário-1-corromper-o-script-do-serviço">Cenário 1: Corromper o script do serviço<a href="#cenário-1-corromper-o-script-do-serviço" class="hanchor" ariaLabel="Anchor">#</a> </h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo nano /usr/local/bin/meu-servico.sh
+</span></span></code></pre></div><p>Modifique o script inserindo um erro de sintaxe ou um comando inválido:</p>
+<p>Reinicie o serviço:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo systemctl restart meu-servico.service
+</span></span></code></pre></div><h5 id="cenário-2-modificar-as-permissões-do-script">Cenário 2: Modificar as permissões do script<a href="#cenário-2-modificar-as-permissões-do-script" class="hanchor" ariaLabel="Anchor">#</a> </h5>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo chmod -x /usr/local/bin/meu-servico.sh
+</span></span><span style="display:flex;"><span>sudo systemctl restart meu-servico.service
+</span></span></code></pre></div><h5 id="cenário-3-dependência-quebrada">Cenário 3: Dependência quebrada<a href="#cenário-3-dependência-quebrada" class="hanchor" ariaLabel="Anchor">#</a> </h5>
+<p>Modifique o arquivo de unidade do serviço para criar uma dependência inexistente:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo nano /etc/systemd/system/meu-servico.service
+</span></span></code></pre></div><p>Adicione uma linha de dependência para um serviço inexistente:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ini" data-lang="ini"><span style="display:flex;"><span><span style="color:#66d9ef">[Unit]</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">Description</span><span style="color:#f92672">=</span><span style="color:#e6db74">Meu Serviço de Exemplo</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">After</span><span style="color:#f92672">=</span><span style="color:#e6db74">network.target</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">Requires</span><span style="color:#f92672">=</span><span style="color:#e6db74">servico-inexistente.service</span>
+</span></span></code></pre></div><p>Recarregue e tente reiniciar:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo systemctl daemon-reload
+</span></span><span style="display:flex;"><span>sudo systemctl restart meu-servico.service
+</span></span></code></pre></div><h5 id="parte-3-investigação-e-diagnóstico">Parte 3: Investigação e Diagnóstico<a href="#parte-3-investigação-e-diagnóstico" class="hanchor" ariaLabel="Anchor">#</a> </h5>
+<p>Agora vamos usar as ferramentas do systemd e journal para diagnosticar os problemas.</p>
+<h5 id="1-verificar-status-do-serviço">1. Verificar status do serviço<a href="#1-verificar-status-do-serviço" class="hanchor" ariaLabel="Anchor">#</a> </h5>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo systemctl status meu-servico.service
+</span></span></code></pre></div><p>Observe os códigos de erro, mensagens e status.</p>
+<h5 id="2-analisar-logs-do-journal">2. Analisar logs do journal<a href="#2-analisar-logs-do-journal" class="hanchor" ariaLabel="Anchor">#</a> </h5>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Ver todos os logs do serviço</span>
+</span></span><span style="display:flex;"><span>sudo journalctl -u meu-servico.service
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Ver apenas os logs de erro</span>
+</span></span><span style="display:flex;"><span>sudo journalctl -u meu-servico.service -p err
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Ver logs de um período específico</span>
+</span></span><span style="display:flex;"><span>sudo journalctl -u meu-servico.service --since <span style="color:#e6db74">&#34;10 minutes ago&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Ver logs do boot atual</span>
+</span></span><span style="display:flex;"><span>sudo journalctl -u meu-servico.service -b
+</span></span></code></pre></div><h5 id="3-verificar-dependências-do-serviço">3. Verificar dependências do serviço<a href="#3-verificar-dependências-do-serviço" class="hanchor" ariaLabel="Anchor">#</a> </h5>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo systemctl list-dependencies meu-servico.service
+</span></span></code></pre></div><h5 id="4-verificar-configuração-do-serviço">4. Verificar configuração do serviço<a href="#4-verificar-configuração-do-serviço" class="hanchor" ariaLabel="Anchor">#</a> </h5>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo systemctl cat meu-servico.service
+</span></span></code></pre></div><h5 id="5-verificar-processos">5. Verificar processos<a href="#5-verificar-processos" class="hanchor" ariaLabel="Anchor">#</a> </h5>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ps aux | grep meu-servico
+</span></span></code></pre></div><h5 id="parte-4-corrigindo-os-problemas">Parte 4: Corrigindo os Problemas<a href="#parte-4-corrigindo-os-problemas" class="hanchor" ariaLabel="Anchor">#</a> </h5>
+<p>Agora vamos corrigir os problemas que criamos:</p>
+<h5 id="corrigir-cenário-1-erro-de-sintaxe">Corrigir Cenário 1 (erro de sintaxe)<a href="#corrigir-cenário-1-erro-de-sintaxe" class="hanchor" ariaLabel="Anchor">#</a> </h5>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo nano /usr/local/bin/meu-servico.sh
+</span></span></code></pre></div><p>DEsfaca o erro de sintexe ou comando invalido</p>
+<h5 id="corrigir-cenário-2-permissões">Corrigir Cenário 2 (permissões)<a href="#corrigir-cenário-2-permissões" class="hanchor" ariaLabel="Anchor">#</a> </h5>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo chmod +x /usr/local/bin/meu-servico.sh
+</span></span></code></pre></div><h5 id="corrigir-cenário-3-dependência-quebrada">Corrigir Cenário 3 (dependência quebrada)<a href="#corrigir-cenário-3-dependência-quebrada" class="hanchor" ariaLabel="Anchor">#</a> </h5>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo nano /etc/systemd/system/meu-servico.service
+</span></span></code></pre></div><p>Remova a linha <code>Requires=servico-inexistente.service</code>.</p>
+<h5 id="recarregar-e-reiniciar">Recarregar e reiniciar<a href="#recarregar-e-reiniciar" class="hanchor" ariaLabel="Anchor">#</a> </h5>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo systemctl daemon-reload
+</span></span><span style="display:flex;"><span>sudo systemctl restart meu-servico.service
+</span></span></code></pre></div><h2 id="conclusão">Conclusão<a href="#conclusão" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p>Acredito que passamos por diversos pontos desde a história e alguns fundamentos dos deamons até o lab com um pouco de mão na massa. Por fim era isso;
+hehehehehe, thank you. - Resident Evil 4, Merchant</p>
+
+      </div></div>
+
+  
+
+  
+    
+
+  
+</article>
+
+  </div>
+
+  
+    <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright">
+        <span>© 2025 Powered by <a href="https://gohugo.io">Hugo</a></span>
+    
+      <span>:: <a href="https://github.com/panr/hugo-theme-terminal" target="_blank">Theme</a> made by <a href="https://github.com/panr" target="_blank">panr</a></span>
+      </div>
+  </div>
+</footer>
+
+
+
+
+
+
+<script type="text/javascript" src="/bundle.min.js"></script>
+
+
+
+
+
+  
+</div>
+
+</body>
+</html>

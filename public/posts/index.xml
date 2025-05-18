@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on OctoRibs</title>
+    <title>Posts on Título do seu site</title>
     <link>http://localhost:1313/posts/</link>
-    <description>Recent content in Posts on OctoRibs</description>
+    <description>Recent content in Posts on Título do seu site</description>
     <generator>Hugo</generator>
-    <language>en-us</language>
+    <language>en</language>
     <lastBuildDate>Wed, 07 May 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Deamons</title>
-      <link>http://localhost:1313/posts/deamons/</link>
+      <title>Deamons - Orquestração invisivel</title>
+      <link>http://localhost:1313/posts/deamons_d/</link>
       <pubDate>Wed, 07 May 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/deamons/</guid>
-      <description>&lt;h3 id=&#34;daemons-da-física-ao-controle-de-sistemas-linux&#34;&gt;Daemons: Da Física ao Controle de Sistemas Linux&lt;/h3&gt;&#xA;&lt;p&gt;Em 1871, James Clerk Maxwell, para explicar a segunda lei da termodinâmica, propôs um experimento mental bastante curioso. Ele imaginou um ser finito, capaz de manipular moléculas em um sistema fechado, observando e tomando decisões sobre abrir ou fechar uma porta para permitir a passagem de moléculas rápidas. Mais tarde, Lord Kelvin chamou esse ser de &amp;ldquo;demônio&amp;rdquo;, não no sentido de uma entidade maléfica, mas referindo-se a uma criatura sobrenatural que trabalha nos bastidores, como o conceito de &lt;em&gt;daemon&lt;/em&gt; na mitologia grega — seres invisíveis aos humanos, executando tarefas importantes.&lt;/p&gt;</description>
+      <guid>http://localhost:1313/posts/deamons_d/</guid>
+      <description>&lt;h2 id=&#34;daemons-da-física-ao-controle-de-sistemas-linux&#34;&gt;Daemons: Da Física ao Controle de Sistemas Linux&lt;/h2&gt;&#xA;&lt;p&gt;Em 1871, James Clerk Maxwell, para explicar a segunda lei da termodinâmica, propôs um experimento mental bastante curioso. Ele imaginou um ser finito, capaz de manipular moléculas em um sistema fechado, observando e tomando decisões sobre abrir ou fechar uma porta para permitir a passagem de moléculas rápidas. Mais tarde, Lord Kelvin chamou esse ser de &amp;ldquo;demônio&amp;rdquo;, não no sentido de uma entidade maléfica, mas referindo-se a uma criatura sobrenatural que trabalha nos bastidores, como o conceito de &lt;em&gt;daemon&lt;/em&gt; na mitologia grega — seres invisíveis aos humanos, executando tarefas importantes.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
