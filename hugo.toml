@@ -1,5 +1,5 @@
-baseURL = 'https://example.org/'
-languageCode = 'en-us'
+baseURL = 'https://lucasriboli.github.io/'
+languageCode = 'pt-br'
 title = 'OctoRibs'
 theme = 'terminal'
 
@@ -11,6 +11,8 @@ theme = 'terminal'
   fullWidthTheme = false
   centerTheme = false
   author = "OctoRibs"
+  staticDir = ["static"]
+  enableGitInfo = true
 
 [languages]
   [languages.en]
