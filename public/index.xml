@@ -15,5 +15,12 @@
       <guid>http://localhost:1313/posts/deamons_d/</guid>
       <description>&lt;h2 id=&#34;daemons-da-física-ao-controle-de-sistemas-linux&#34;&gt;Daemons: Da Física ao Controle de Sistemas Linux&lt;/h2&gt;&#xA;&lt;p&gt;Em 1871, James Clerk Maxwell, para explicar a segunda lei da termodinâmica, propôs um experimento mental bastante curioso. Ele imaginou um ser finito, capaz de manipular moléculas em um sistema fechado, observando e tomando decisões sobre abrir ou fechar uma porta para permitir a passagem de moléculas rápidas. Mais tarde, Lord Kelvin chamou esse ser de &amp;ldquo;demônio&amp;rdquo;, não no sentido de uma entidade maléfica, mas referindo-se a uma criatura sobrenatural que trabalha nos bastidores, como o conceito de &lt;em&gt;daemon&lt;/em&gt; na mitologia grega — seres invisíveis aos humanos, executando tarefas importantes.&lt;/p&gt;</description>
     </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/about/</guid>
+      <description>&lt;h2 id=&#34;over-here-stranger&#34;&gt;Over here, stranger&lt;/h2&gt;&#xA;&lt;p&gt;Olá! Seja muito bem-vindo(a) ao meu blog.&lt;/p&gt;&#xA;&lt;p&gt;Criei este espaço como uma forma de documentar minha jornada, organizar ideias e compartilhar experiências vividas no dia a dia — seja estudando, desenvolvendo projetos, testando novas soluções ou simplesmente refletindo sobre tecnologia e seus impactos.&lt;/p&gt;&#xA;&lt;p&gt;Acredito que o conhecimento se fortalece quando é compartilhado. Por isso, aqui você encontrará conteúdos que vão desde anotações técnicas e práticas de laboratório até reflexões mais amplas sobre processos, arquitetura, tomadas de decisão e caminhos de crescimento.&lt;/p&gt;</description>
+    </item>
   </channel>
 </rss>

@@ -17,7 +17,7 @@ theme = 'terminal'
     languageName = "Português"
     title = "Título do seu site"
     subtitle = "Subtítulo do seu site"
-    owner = "Seu Nome"
+    owner = "OctoRibs"
     keywords = ""
     copyright = ""
     menuMore = "Mostrar mais"
@@ -25,7 +25,7 @@ theme = 'terminal'
     readOtherPosts = "Ler outros posts"
     
     [languages.en.params.logo]
-      logoText = "Nome do seu blog"
+      logoText = "OctoRibs"
       logoHomeLink = "/"
     
     [languages.en.menu]
