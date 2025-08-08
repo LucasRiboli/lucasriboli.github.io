@@ -215,5 +215,5 @@ sudo systemctl cat meu-servico.service
 ps aux | grep meu-servico
 ```
 
-Todos esses comandos vão te ajudar em troubleshooting, recomendo rodar eles e ver o que cada um faz buscando pegar cada nuance. 
-Agora tende achar os erros dentro dos logs quebre novamente (ou mais) corrija eles e reinicie o deamon. No fim a ideia é essa praticar para se um dia tiver que fazer um e atuar nele vai ta tudo show.
+Todos esses comandos vão te ajudar no troubleshooting. Recomendo rodar eles e ver o que cada um faz, buscando pegar cada nuance. Agora tenta achar os erros dentro dos logs, quebra novamente (ou mais), corrige eles e reinicia o daemon. No fim a ideia é essa...
+Praticar para que se um dia tiver que fazer um e atuar nele, vai estar tudo show.
