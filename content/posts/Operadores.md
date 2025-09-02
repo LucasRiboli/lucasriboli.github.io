@@ -41,7 +41,7 @@ Os Controllers garantem que tudo fique no estado correto. Se um pod falha, o Con
 
 Esse design todo tem um núcleo quando falamos em resiliência: o **control loop**. É nele que a mágica acontece. Observar o estado atual, comparar com o desejado e agir se necessário. Isso é exatamente o que os operadores fazem.
 
-![Arquitetura do K8s na minha visão](k8sarq.png)
+![Arquitetura do K8s na minha visão](/posts/images/k8sarq.png)
 
 ---
 
@@ -56,7 +56,7 @@ O operador enxerga o API Server através de um **CRD (Custom Resource Definition
 
 Percebe o padrão? O operador replica o que um SRE faria manualmente: observar métricas específicas do domínio, tomar decisões inteligentes e agir automaticamente.
 
-![Arquitetura dos operadores na minha visão](k8sopearq.png)
+![Arquitetura dos operadores na minha visão](/posts/images/k8sopearq.png)
 
 ---
 
@@ -67,7 +67,7 @@ E vocês também. Só que não necessariamente dentro do K8s.
 
 Primeiro, entendendo no macro ou micro, não sei muito bem:
 
-![Paralelo do Operator Pattern](images/operadorPattern.png)  
+![Paralelo do Operator Pattern](/posts/images/operadorPattern.png)  
 *sim, peguei um slide da apresentação, pois só vi esse paralelo depois de escrever o roteiro e agora estou retocando para o texto* 
 
 Na prática, estamos falando de **reconciliação** — o famoso “observe, compare e aplique”. Esse conceito existe há muito tempo:
@@ -119,7 +119,7 @@ cd Forge-Operator-Lab
 
 O próximo passo, acredito, seria entender primeiro o que eu fiz. Para isso, tem um desenho:
 
-![lab do Operator Pattern](lab.png)  
+![lab do Operator Pattern](/posts/images/lab.png)  
 
 OBS: Esse lab não é sobre substituir o Kubernetes (ava), mas sim mostrar como o padrão de operadores pode ser aplicado em qualquer infraestrutura — até com primitivos simples do Linux. A ideia é abrir espaço para experimentos, forks e adaptações.
 
