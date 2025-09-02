@@ -7,7 +7,7 @@ date: "2025-09-02"
 # Operadores Além do K8s: IaC Reativa com Primitivos do Linux
 
 Volta e meia eu fico muito aficionado por algum tema da computação. Às vezes é um assunto já batido, que encontro de monte por aí, mas geralmente é algo mais específico, que alguns conhecem e poucos usam.  
-O tema da vez foi o **Incus**.
+O tema da vez foi o **Incus**, um sistema de virtualização e containers derivado do LXD, voltado para quem precisa de algo mais leve que uma VM, mas mais completo que um container tradicional.
 
 Quando me convidaram para falar em uma apresentação, fiquei empolgado por dois motivos: primeiro, porque seria a minha primeira apresentação, segundo, porque eu poderia falar sobre Incus e LXD.  
 Comecei a pensar em como abordar e percebi que poderia acabar trazendo apenas vários *hands-on* e conceitos de virtualização. Fiquei tentado a fazer uma linha quase histórica sobre virtualização e seus usos, mas me imaginei falando 40 minutos só disso… e talvez eu não fosse a melhor pessoa para esse tipo de narrativa (nem ficaria realmente feliz fazendo).
@@ -52,7 +52,7 @@ Operadores são como pequenos K8s que automatizam conhecimento específico de do
 Exemplo prático:  
 o K8s escala pods baseado em CPU e memória. Mas e se quisermos algo mais inteligente, como escalar com base no tamanho de uma fila de mensagens?  
 
-O operador enxerga o API Server através de um **CRD (Custom Resource Definition)**. Ele entende o YAML do desejo do usuário e atua como um controller especializado. Nesse caso, ele observaria a fila, contaria mensagens e, se necessário, aumentaria ou reduziria o número de pods.
+O operador interage com o API Server por meio de um CRD (Custom Resource Definition), que define um novo tipo de recurso. A partir da especificação YAML (define o estado desejado pelo usuário), o operador atua como um controller especializado: observa a fila, contabiliza mensagens e, quando necessário, aumenta ou reduz o número de pods.
 
 Percebe o padrão? O operador replica o que um SRE faria manualmente: observar métricas específicas do domínio, tomar decisões inteligentes e agir automaticamente.
 
@@ -97,18 +97,16 @@ act = restart service
 
 ## Amarrando tudo
 
-Nesse ponto, já citei todos os interesses que mencionei no início — exceto dois.  
-Trouxe também um pouco de contexto e base do padrão **control loop**. Mas e agora?  
+Agora vamos trazer um pouco de contexto e base do padrão **control loop** em um Lab. Quero dizer, meu divertimento começa agora (espero que o de vocês também).  
 
-Bom, agora meu divertimento começa (espero que o de vocês também).  
-A ideia: criar um **lab** para demonstrar um operador usando primitivos do Linux, um pouco de Go, Incus — e entregar um HPA para containers Incus.  
+A ideia: criar um **lab** para demonstrar um operador usando primitivos do Linux, um pouco de Go, Incus e entregar um HPA para containers Incus.  
 
-É isso mesmo. Bora codar um pouco.
+É isso mesmo. Bora ver um pouco.
 
-Aliás, o código que usei nesse lab está disponível aqui:
+Aliás, o código todo que usei nesse lab está disponível aqui:
 https://github.com/LucasRiboli/Forge-Operator-Lab
 
-Bom seguindo a ideia de como criar um passo a passo e demonstrativo (sinto que sou pessimo nisso)
+---
 
 Primeiro passo acredito que seria clonar o repo:
 
@@ -117,13 +115,14 @@ git clone https://github.com/LucasRiboli/Forge-Operator-Lab.git
 cd Forge-Operator-Lab
 ```
 
-O próximo passo, acredito, seria entender primeiro o que eu fiz. Para isso, tem um desenho:
+O próximo passo, seria entender primeiro o que eu fiz. Para isso, tem um desenho:
 
-![lab do Operator Pattern](/posts/images/lab.png)  
+![lab do Operator Pattern](/posts/images/lab.png)
+*Aqui eu tentei trazer uma visão proxima a do K8s já que ele é nosso base, porém muita coisa foi abstraida*
 
-OBS: Esse lab não é sobre substituir o Kubernetes (ava), mas sim mostrar como o padrão de operadores pode ser aplicado em qualquer infraestrutura — até com primitivos simples do Linux. A ideia é abrir espaço para experimentos, forks e adaptações.
+**OBS: Esse lab não é sobre substituir o Kubernetes (kkkk obvio né), mas sim mostrar como o operator pattern pode ser aplicado em qualquer infraestrutura, (com primitivos simples do Linux nesse caso). A ideia é abrir espaço para experimentos, forks e adaptações.**
 
-Ok, explicado isso vamos implementar a ideia e de forma talvez meio feia, mas esse é o core da nossa aplicacao: `func runHPALoop`:
+Ok, explicado isso vamos nos voltar para o código e ver o core do nosso control loop a `func runHPALoop`:
 
 Por que ela é o core? Bom, porque nela está o processo do control loop inteiro::
 
@@ -154,7 +153,7 @@ compare:
 		if runningPods < int64(hpa.HPA.MaxPods) {...}
     }
 ```
-E
+&
 ```go
 if totalMediaMemory < int64(hpa.HPA.MemoryThreshold)/2 {
 		if runningPods > int64(hpa.HPA.MinPods) {...}
@@ -179,7 +178,9 @@ compare   -> checar se está acima/abaixo do threshold
 act       -> criar ou apagar pods
 ```
 
-Entendendo esse padrão em código, podemos compreender como iniciar essa aplicação toda. De início, eu recomendo instalar o Incus seguindo o passo a passo da documentação oficial (https://linuxcontainers.org/incus/docs/main/installing/)
+Todos o resto do código basicamente é apoio/lógica ou o Incus executando alguma acao. Recomendo olharem e entenderem também.
+
+Entendendo esse padrão em código, podemos avancar em como iniciar essa aplicação toda. Primeiro, instalar o Incus seguindo o passo a passo da documentação oficial (https://linuxcontainers.org/incus/docs/main/installing/)
 
 Após fazer isso pode seguir gerando um executavel do nosso sistema:
 
@@ -202,5 +203,7 @@ sudo ./lab-init.sh
 ```
  
 Basicamente, assim você teria seu HPA baseado em memória para o cluster Incus, com o daemon operador como base de controle e o código (que você pode ajustar) operando tudo.
+
+Enfim, experimente alterar o estado desejado para desligar o container em vez de subir outro. O operador deve reagir e aplicar essa mudança. Essa é a mágica: você descreve o que quer, e o loop garante que se torne realidade
 
 Por fim era isso, gostei mto de fazer esse estudo e esse lab para a apresentacao e transformar ele em texto e segue sendo bom criar labs e compartilhar.
