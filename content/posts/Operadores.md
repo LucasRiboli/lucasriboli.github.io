@@ -9,12 +9,14 @@ date: "2025-09-02"
 Volta e meia eu fico muito aficionado por algum tema da computação. Às vezes é um assunto já batido, que encontro de monte por aí, mas geralmente é algo mais específico, que alguns conhecem e poucos usam.  
 O tema da vez foi o **Incus**.
 
-Quando me convidaram para falar em uma apresentação, fiquei empolgado por dois motivos: primeiro, porque seria a minha primeira apresentação; segundo, porque eu poderia falar sobre Incus e LXD.  
-Comecei a pensar no que abordar e percebi que poderia acabar trazendo apenas vários *hands-on* e conceitos de virtualização. Fiquei tentado a fazer uma linha quase histórica sobre virtualização e seus usos, mas me imaginei falando 40 minutos só disso… e talvez eu não fosse a melhor pessoa para esse tipo de narrativa (nem ficaria realmente feliz fazendo).
+Quando me convidaram para falar em uma apresentação, fiquei empolgado por dois motivos: primeiro, porque seria a minha primeira apresentação, segundo, porque eu poderia falar sobre Incus e LXD.  
+Comecei a pensar em como abordar e percebi que poderia acabar trazendo apenas vários *hands-on* e conceitos de virtualização. Fiquei tentado a fazer uma linha quase histórica sobre virtualização e seus usos, mas me imaginei falando 40 minutos só disso… e talvez eu não fosse a melhor pessoa para esse tipo de narrativa (nem ficaria realmente feliz fazendo).
 
 Então decidi retomar alguns tópicos que vinha pensando e conceitos que vi quando estive no MGC: daemon, self-hosted, o próprio Incus, Golang e… **Operadores**. Nesse momento, resolvi juntar tudo e focar em algo mais prático de laboratório: explicar algo próximo do dia a dia do dev (talvez não de todos), mas ao mesmo tempo experimentar umas coisas.
 
 E assim surgiu o tema: **Operadores Além do K8s: IaC Reativa com Primitivos do Linux**.
+
+Mas para chegar no lab precisamos entender algumas coisas.
 
 ---
 
@@ -39,7 +41,7 @@ Os Controllers garantem que tudo fique no estado correto. Se um pod falha, o Con
 
 Esse design todo tem um núcleo quando falamos em resiliência: o **control loop**. É nele que a mágica acontece. Observar o estado atual, comparar com o desejado e agir se necessário. Isso é exatamente o que os operadores fazem.
 
-![Arquitetura do K8s na minha visão](../images/k8sarq.png)
+![Arquitetura do K8s na minha visão](k8sarq.png)
 
 ---
 
@@ -54,18 +56,18 @@ O operador enxerga o API Server através de um **CRD (Custom Resource Definition
 
 Percebe o padrão? O operador replica o que um SRE faria manualmente: observar métricas específicas do domínio, tomar decisões inteligentes e agir automaticamente.
 
-![Arquitetura dos operadores na minha visão](../images/k8sopearq.png)
+![Arquitetura dos operadores na minha visão](k8sopearq.png)
 
 ---
 
 ## Mas… eu já vi isso antes
 
-Quando vi o Google/K8s chamarem isso de “Operator Pattern”, fiquei encucado. Pensei: *eu já vi esse padrão antes*.  
+Quando vi o K8s chamar isso de “Operator Pattern”, fiquei pensando em como eles foram geniais,fiquei impressionado, eles conseguiram dar nome e estrutura a algo que fazíamos há décadas de forma ad-hoc. Tipo eu pensei: *eu já vi esse padrão antes*.  
 E vocês também. Só que não necessariamente dentro do K8s.
 
 Primeiro, entendendo no macro ou micro, não sei muito bem:
 
-![Paralelo do Operator Pattern](../images/operadorPattern.png)  
+![Paralelo do Operator Pattern](images/operadorPattern.png)  
 *sim, peguei um slide da apresentação, pois só vi esse paralelo depois de escrever o roteiro e agora estou retocando para o texto* 
 
 Na prática, estamos falando de **reconciliação** — o famoso “observe, compare e aplique”. Esse conceito existe há muito tempo:
@@ -117,7 +119,7 @@ cd Forge-Operator-Lab
 
 O próximo passo, acredito, seria entender primeiro o que eu fiz. Para isso, tem um desenho:
 
-![Paralelo do Operator Pattern](../images/lab.png)  
+![lab do Operator Pattern](lab.png)  
 
 OBS: Esse lab não é sobre substituir o Kubernetes (ava), mas sim mostrar como o padrão de operadores pode ser aplicado em qualquer infraestrutura — até com primitivos simples do Linux. A ideia é abrir espaço para experimentos, forks e adaptações.
 
