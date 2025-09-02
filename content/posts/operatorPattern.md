@@ -1,6 +1,6 @@
 ---
 author: "Lucas"
-title: "Operadores Além do K8s: IaC Reativa com Primitivos do Linux"
+title: "Operator Pattern além do K8s"
 date: "2025-09-02"
 ---
 
@@ -13,7 +13,7 @@ Comecei a pensar em como abordar e percebi que poderia acabar trazendo apenas v�
 
 Então decidi retomar alguns tópicos que vinha pensando e conceitos que vi quando estive no MGC: daemon, o próprio Incus, Golang e… **Operadores**. Nesse momento, resolvi juntar tudo e focar em algo mais prático como um lab: explicar algo próximo do dia a dia do dev (talvez não de todos), mas ao mesmo tempo experimentar umas coisas.
 
-E assim surgiu o tema: **Operadores Além do K8s: IaC Reativa com Primitivos do Linux**.
+E assim surgiu o tema: **Operator Pattern além do K8s: IaC Reativa com Primitivos do Linux**.
 
 Mas para chegar no lab precisamos entender algumas coisas.
 
