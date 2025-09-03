@@ -56,8 +56,9 @@ O operador interage com o API Server por meio de um CRD (Custom Resource Definit
 Percebe o padrão? O operador replica o que um SRE faria manualmente: observar métricas específicas do domínio, tomar decisões inteligentes e age automaticamente.
 
 ![Arquitetura dos operadores na minha visão](/posts/images/k8sopearq.png)
+
 *Aqui a gente consegue ver isso acontencendo, o controller no meio agindo como operador ele busca métricas de uma fila no Metrics faz a lógica de comparação no scaller já tomando a decisão de agir e com isso passa a vez para o Controller que é quem se comunica com o Api Server. Lindo de se ver*
----
+
 
 ## Mas… eu já vi isso antes
 
