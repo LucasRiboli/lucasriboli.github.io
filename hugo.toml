@@ -1,32 +1,82 @@
-baseURL = 'https://lucasriboli.github.io/'
-languageCode = 'en-us'
-title = 'OctoRibs'
-theme = 'terminal'
-defaultContentLanguage = 'en'
+baseURL = "https://lucasriboli.github.io/"
+title = "Lucas Antonio Riboli"
+languageCode = "pt-br"
+defaultContentLanguage = "pt-br"
+theme = "DoIt"
 
-# Outras configurações...
+[params]
+  # versão do tema (ajuste conforme a release que você usa)
+  version = "0.4.1"
 
-[languages]
-  [languages.en]
-    title = "OctoRibs"
-    subtitle = "Your Subtitle"
-    keywords = ""
-    copyright = ""
-    menuMore = "Show more"
-    readMore = "Read more"
-    readOtherPosts = "Read other posts"
-    
-    [languages.en.params.logo]
-      logoText = "OctoRibs"
-      logoHomeLink = "/"
-    
-    [languages.en.menu]
-      [[languages.en.menu.main]]
-        identifier = "posts"
-        name = "Posts"
-        url = "/posts"
-      [[languages.en.menu.main]]
-        identifier = "about"
-        name = "About"
-        url = "/about"
-  
+# ==== HOME (avatar + título + redes) ====
+[params.home]
+  rss = 10
+
+  [params.home.profile]
+    enable = true
+    # Coloque sua foto em: static/images/avatar.jpg
+    avatarURL = "/images/octo-tr.png"
+    avatarLinkURL = ""        # opcional: link ao clicar no avatar
+    title = "Lucas Antonio Riboli"
+    subtitle = "Cloud Developer | Backend | Go, Python, Java"
+    typeit = false            # animação no subtítulo (true/false)
+    social = true             # <- isso exibe os ícones na home
+    disclaimer = ""           # opcional (HTML permitido)
+
+  [params.home.posts]
+    enable = true
+    paginate = 6
+    defaultHiddenFromHomePage = false
+
+# ==== REDES SOCIAIS (usar apenas usernames/ids) ====
+[params.social]
+  GitHub   = "LucasRiboli"
+  Linkedin = "lucas-riboli"
+  Twitter  = "LucasRiboli3"  # o tema ainda usa a chave "Twitter" para o X
+
+# ==== MARKUP / HIGHLIGHT ====
+[markup]
+  [markup.highlight]
+    noClasses = false
+  [markup.goldmark.renderer]
+    unsafe = true
+  [markup.tableOfContents]
+    startLevel = 2
+    endLevel = 6
+
+# ==== OUTPUTS (necessário para busca Fuse) ====
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+  page = ["HTML", "MarkDown"]
+  section = ["HTML", "RSS"]
+  taxonomy = ["HTML", "RSS"]
+
+# ==== BUSCA (Fuse.js) ====
+[params.search]
+  enable = true
+  type   = "fuse"
+  contentLength   = 4000
+  maxResultLength = 10
+  snippetLength   = 30
+  highlightTag    = "em"
+
+# ==== MENU ====
+[menu]
+  [[menu.main]]
+    identifier = "posts"
+    name = "Posts"
+    url  = "/posts/"
+    weight = 1
+
+  [[menu.main]]
+    identifier = "about"
+    name = "Sobre"
+    url  = "/about/"
+    weight = 2
+
+# ==== TAXONOMIAS (padrão do tema) ====
+[taxonomies]
+  author = "authors"
+  category = "categories"
+  tag = "tags"
+  series = "series"

@@ -1,19 +1,24 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Posts on OctoRibs</title>
-    <link>http://localhost:1313/posts/</link>
-    <description>Recent content in Posts on OctoRibs</description>
-    <generator>Hugo</generator>
-    <language>en</language>
-    <lastBuildDate>Wed, 07 May 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Deamons - Orquestração invisivel</title>
-      <link>http://localhost:1313/posts/deamons_d/</link>
-      <pubDate>Wed, 07 May 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/deamons_d/</guid>
-      <description>&lt;h2 id=&#34;daemons-da-física-ao-controle-de-sistemas-linux&#34;&gt;Daemons: Da Física ao Controle de Sistemas Linux&lt;/h2&gt;&#xA;&lt;p&gt;Em 1871, James Clerk Maxwell, para explicar a segunda lei da termodinâmica, propôs um experimento mental bastante curioso. Ele imaginou um ser finito, capaz de manipular moléculas em um sistema fechado, observando e tomando decisões sobre abrir ou fechar uma porta para permitir a passagem de moléculas rápidas. Mais tarde, Lord Kelvin chamou esse ser de &amp;ldquo;demônio&amp;rdquo;, não no sentido de uma entidade maléfica, mas referindo-se a uma criatura sobrenatural que trabalha nos bastidores, como o conceito de &lt;em&gt;daemon&lt;/em&gt; na mitologia grega — seres invisíveis aos humanos, executando tarefas importantes.&lt;/p&gt;</description>
-    </item>
-  </channel>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Todas Publicações - Lucas Antonio Riboli</title>
+        <link>http://localhost:1313/posts/</link>
+        <description>Todas Publicações | Lucas Antonio Riboli</description>
+        <generator>Hugo -- gohugo.io</generator><language>pt-br</language><lastBuildDate>Tue, 02 Sep 2025 00:00:00 &#43;0000</lastBuildDate><atom:link href="http://localhost:1313/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>Operator Pattern além do K8s</title>
+    <link>http://localhost:1313/posts/operatorpattern/</link>
+    <pubDate>Tue, 02 Sep 2025 00:00:00 &#43;0000</pubDate><author>
+        <name>Lucas Riboli</name>
+    </author><guid>http://localhost:1313/posts/operatorpattern/</guid>
+    <description><![CDATA[<p>Volta e meia eu fico muito aficionado por algum tema da computação. Às vezes é um assunto já batido, que encontro de monte por aí, mas geralmente é algo mais específico, que alguns conhecem e poucos usam.<br>
+O tema da vez foi o <strong>Incus</strong>, um sistema de virtualização e containers derivado do LXD, voltado para quem precisa de algo mais leve que uma VM, mas mais completo que um container tradicional.</p>]]></description>
+</item><item>
+    <title>Daemons</title>
+    <link>http://localhost:1313/posts/deamons_d/</link>
+    <pubDate>Fri, 08 Aug 2025 00:00:00 &#43;0000</pubDate><author>
+        <name>Lucas Riboli</name>
+    </author><guid>http://localhost:1313/posts/deamons_d/</guid>
+    <description><![CDATA[<h2 id="daemons-da-física--ao-controle-de-sistemas-linux" class="headerLink">
+    <a href="#daemons-da-f%c3%adsica--ao-controle-de-sistemas-linux" class="header-mark"></a>Daemons: Da Física (?) ao Controle de Sistemas Linux</h2><p>Se tem conceitos e histórias que eu sempre gostei são as relacionadas a fisica, mitologia e computação. E passando por ai na interwebs e dia a dia de trabalho me deparei certa vez com os DAEMONS, bom O nome ja chama a atenção e na minha opinião as relações e conceitos também então, bora ver mais.</p>
+<p>Em 1871 (embora ja houvesse citado ela 1867), James Clerk Maxwell, para explicar a segunda lei da termodinâmica, propôs um experimento mental que refutasse ela. Ele imaginou um ser finito, capaz de manipular moléculas em um sistema fechado, que observava e tomava decisões sobre abrir ou fechar uma porta para permitir a passagem de moléculas rápidas, basicamente de acordo com ele um ser impossivel de existir. Mais tarde, Lord Kelvin chamou esse ser de &ldquo;demônio&rdquo;, não no sentido ruim da coisa (ele nao quis dizer, mochila de criança, 7 pele, sintéco gelado&hellip;), mas referindo-se a uma criatura sobrenatural que trabalha nos bastidores, o conceito de <em>daemon</em> da mitologia grega, seres invisíveis aos humanos, executando tarefas importantes.</p>]]></description>
+</item></channel>
 </rss>
