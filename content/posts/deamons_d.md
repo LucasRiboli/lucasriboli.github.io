@@ -1,5 +1,5 @@
 ---
-author: "Lucas"
+author: "Lucas Riboli"
 title: "Daemons"
 date: "2025-08-08"
 ---

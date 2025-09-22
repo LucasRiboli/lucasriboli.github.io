@@ -1,5 +1,5 @@
 ---
-author: "Lucas"
+author: "Lucas Riboli"
 title: "Operator Pattern além do K8s"
 date: "2025-09-02"
 ---
