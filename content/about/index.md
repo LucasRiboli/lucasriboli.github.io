@@ -1,11 +1,16 @@
 ## Over here, stranger
 
-Olá! Seja muito bem-vindo(a) ao meu blog.
+Sou Lucas Riboli, engenheiro de software com foco em sistemas distribuídos, redes e automação de infraestrutura.
 
-Criei este espaço como uma forma de documentar minha jornada, organizar ideias e compartilhar experiências vividas no dia a dia — seja estudando, desenvolvendo projetos, testando novas soluções ou simplesmente refletindo sobre tecnologia e seus impactos.
+Trabalho diariamente com **Go, Python e Java**, explorando desde o desenvolvimento de serviços até assuntos diversos.  
 
-Acredito que o conhecimento se fortalece quando é compartilhado. Por isso, aqui você encontrará conteúdos que vão desde anotações técnicas e práticas de laboratório até reflexões mais amplas sobre processos, arquitetura, tomadas de decisão e caminhos de crescimento.
----
-**Conecte-se comigo**
-- [GitHub](https://github.com/LucasRiboli)
+Este espaço é para:  
+- Documentação de projetos open source e experimentos em laboratório.  
+- Artigos técnicos sobre **infraestrutura, operadores, sistemas distribuídos e cloud**.  
+- Reflexões sobre decisões arquiteturais e padrões de desenvolvimento.  
+
+Acredito que conhecimento só cresce quando é compartilhado — e este site é meu repositório vivo de ideias, testes e aprendizados.
+
+**Conecte-se comigo**  
+- [GitHub](https://github.com/LucasRiboli)  
 - [LinkedIn](https://www.linkedin.com/in/lucas-riboli)
