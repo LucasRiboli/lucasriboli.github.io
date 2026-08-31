@@ -2,6 +2,8 @@
 author: "Lucas Riboli"
 title: "Daemons"
 date: "2025-08-08"
+description: "Da física à mitologia grega até o controle de serviços no Linux, com um hands-on de systemd e troubleshooting via journalctl."
+tags: ["linux", "systemd", "daemons", "troubleshooting"]
 ---
 
 ## Daemons: Da Física (?) ao Controle de Sistemas Linux

@@ -2,6 +2,8 @@
 author: "Lucas Riboli"
 title: "Operator Pattern além do K8s"
 date: "2025-09-02"
+description: "Reconciliation loop, operadores como SRE codificado e um lab de HPA para containers Incus usando Go e primitivos do Linux."
+tags: ["kubernetes", "operators", "golang", "incus", "sre"]
 ---
 
 Volta e meia eu fico muito aficionado por algum tema da computação. Às vezes é um assunto já batido, que encontro de monte por aí, mas geralmente é algo mais específico, que alguns conhecem e poucos usam.  

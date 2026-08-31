@@ -1,3 +1,9 @@
+---
+title: "About"
+description: "Quem é o Lucas Riboli e por que este blog existe."
+date: "2025-09-27"
+---
+
 ## Over here, stranger
 
 Sou Lucas Riboli, engenheiro de software com foco em sistemas distribuídos, redes e automação de infraestrutura.

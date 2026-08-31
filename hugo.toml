@@ -1,32 +1,51 @@
-baseURL = 'https://lucasriboli.github.io/'
-languageCode = 'en-us'
+baseURL = 'https://octoribs.dev/'
+languageCode = 'pt-br'
+defaultContentLanguage = 'pt-br'
 title = 'OctoRibs'
-theme = 'terminal'
-defaultContentLanguage = 'en'
+theme = 'archie'
+copyright = '© Lucas Riboli'
 
-# Outras configurações...
+pygmentsstyle = 'monokai'
+pygmentscodefences = true
+pygmentscodefencesguesssyntax = true
 
-[languages]
-  [languages.en]
-    title = "OctoRibs"
-    subtitle = "Your Subtitle"
-    keywords = ""
-    copyright = ""
-    menuMore = "Show more"
-    readMore = "Read more"
-    readOtherPosts = "Read other posts"
-    
-    [languages.en.params.logo]
-      logoText = "OctoRibs"
-      logoHomeLink = "/"
-    
-    [languages.en.menu]
-      [[languages.en.menu.main]]
-        identifier = "posts"
-        name = "Posts"
-        url = "/posts"
-      [[languages.en.menu.main]]
-        identifier = "about"
-        name = "About"
-        url = "/about"
-  
+[pagination]
+  pagerSize = 10
+
+[params]
+  mode = 'auto'
+  useCDN = false
+  subtitle = 'Infraestrutura, sistemas distribuídos, Linux e Go.'
+  description = 'Blog técnico de Lucas Riboli sobre infraestrutura, sistemas distribuídos, Linux e Go.'
+  mainSections = ['posts']
+  favicon = '/favicon.ico'
+
+[[params.social]]
+  name = 'GitHub'
+  icon = 'github'
+  url = 'https://github.com/LucasRiboli'
+
+[[params.social]]
+  name = 'LinkedIn'
+  icon = 'linkedin'
+  url = 'https://www.linkedin.com/in/lucas-riboli'
+
+[[menu.main]]
+  name = 'Home'
+  url = '/'
+  weight = 1
+
+[[menu.main]]
+  name = 'Posts'
+  url = '/posts'
+  weight = 2
+
+[[menu.main]]
+  name = 'About'
+  url = '/about'
+  weight = 3
+
+[[menu.main]]
+  name = 'Tags'
+  url = '/tags'
+  weight = 4
