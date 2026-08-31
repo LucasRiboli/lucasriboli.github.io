@@ -1,0 +1,23 @@
+[readMore]
+other = "Read more ⟶"
+
+[allPosts]
+other = "All articles"
+
+[taggedEntries]
+other = "Entries tagged"
+
+[postedOn]
+other = "Posted on"
+
+[tableOfContents]
+other = "Table of contents"
+
+[prev]
+other = "← Prev"
+
+[next]
+other = "Next →"
+
+[allTags]
+other = "All tags"

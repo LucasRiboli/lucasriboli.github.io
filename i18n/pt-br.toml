@@ -1,0 +1,23 @@
+[readMore]
+other = "Leia mais ⟶"
+
+[allPosts]
+other = "Todos os artigos"
+
+[taggedEntries]
+other = "Artigos com a tag"
+
+[postedOn]
+other = "Publicado em"
+
+[tableOfContents]
+other = "Índice"
+
+[prev]
+other = "← Anterior"
+
+[next]
+other = "Próximo →"
+
+[allTags]
+other = "Todas as tags"

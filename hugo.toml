@@ -1,9 +1,8 @@
 baseURL = 'https://octoribs.dev/'
-languageCode = 'pt-br'
-defaultContentLanguage = 'pt-br'
 title = 'OctoRibs'
 theme = 'archie'
 copyright = '© Lucas Riboli'
+defaultContentLanguage = 'pt-br'
 
 pygmentsstyle = 'monokai'
 pygmentscodefences = true
@@ -12,11 +11,10 @@ pygmentscodefencesguesssyntax = true
 [pagination]
   pagerSize = 10
 
+# Params compartilhados entre os idiomas
 [params]
   mode = 'auto'
   useCDN = false
-  subtitle = 'Infraestrutura, sistemas distribuídos, Linux e Go.'
-  description = 'Blog técnico de Lucas Riboli sobre infraestrutura, sistemas distribuídos, Linux e Go.'
   mainSections = ['posts']
   favicon = '/favicon.ico'
 
@@ -28,24 +26,55 @@ pygmentscodefencesguesssyntax = true
 [[params.social]]
   name = 'LinkedIn'
   icon = 'linkedin'
-  url = 'https://www.linkedin.com/in/lucas-riboli'
+  url = 'https://www.linkedin.com/in/lucas-riboli-56143a160'
 
-[[menu.main]]
-  name = 'Home'
-  url = '/'
-  weight = 1
+[languages]
+  [languages.pt-br]
+    languageName = 'Português'
+    languageCode = 'pt-BR'
+    weight = 1
+    title = 'OctoRibs'
+    [languages.pt-br.params]
+      subtitle = 'Infraestrutura, sistemas distribuídos, Linux e Go.'
+      description = 'Blog técnico de Lucas Riboli sobre infraestrutura, sistemas distribuídos, Linux e Go.'
+    [[languages.pt-br.menu.main]]
+      name = 'Home'
+      url = '/'
+      weight = 1
+    [[languages.pt-br.menu.main]]
+      name = 'Posts'
+      url = '/posts'
+      weight = 2
+    [[languages.pt-br.menu.main]]
+      name = 'Sobre'
+      url = '/about'
+      weight = 3
+    [[languages.pt-br.menu.main]]
+      name = 'Tags'
+      url = '/tags'
+      weight = 4
 
-[[menu.main]]
-  name = 'Posts'
-  url = '/posts'
-  weight = 2
-
-[[menu.main]]
-  name = 'About'
-  url = '/about'
-  weight = 3
-
-[[menu.main]]
-  name = 'Tags'
-  url = '/tags'
-  weight = 4
+  [languages.en]
+    languageName = 'English'
+    languageCode = 'en'
+    weight = 2
+    title = 'OctoRibs'
+    [languages.en.params]
+      subtitle = 'Infrastructure, distributed systems, Linux and Go.'
+      description = "Lucas Riboli's technical blog on infrastructure, distributed systems, Linux and Go."
+    [[languages.en.menu.main]]
+      name = 'Home'
+      url = '/en/'
+      weight = 1
+    [[languages.en.menu.main]]
+      name = 'Posts'
+      url = '/en/posts'
+      weight = 2
+    [[languages.en.menu.main]]
+      name = 'About'
+      url = '/en/about'
+      weight = 3
+    [[languages.en.menu.main]]
+      name = 'Tags'
+      url = '/en/tags'
+      weight = 4
